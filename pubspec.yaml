@@ -1,0 +1,16 @@
+name: iban
+description: A validation library for ibans
+version: 0.0.1
+author: Christian Loitsch <christian@loitsch.com>
+homepage: https://github.com/close2/iban
+
+environment:
+  sdk: '>=1.0.0 <2.0.0'
+
+dependencies:
+  mod97: '^0.0.1'
+  source_gen: '^0.5.4'
+  build_runner: ^0.3.0
+
+dev_dependencies:
+  test: '>=0.12.0 <0.13.0'
