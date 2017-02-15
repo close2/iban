@@ -2,6 +2,7 @@
 
 Validate IBANs
 
+![Build Status](https://travis-ci.org/close2/mod97.svg?branch=master)
 ## Usage
 
 A simple usage example:
