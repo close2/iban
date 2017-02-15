@@ -6,12 +6,13 @@ String _template = '''
 
 part of iban;
 
+/// A list of all known IBAN specifications.
 const Map<String, Specification> specifications = const {
   INSERT_SPECS_HERE
 };
 ''';
 
-main(List<String> args) {
+int main(List<String> args) {
   String out = 'lib/src/specification_definitions.dart';
   if (args.isNotEmpty) {
     if (args[0] == '-h' || args[0] == '--help') {
@@ -33,14 +34,14 @@ main(List<String> args) {
   }).join(',\n  ');
   var outFile = new File(out);
   outFile.writeAsStringSync(_template.replaceFirst('INSERT_SPECS_HERE', specs));
+
+  return 0;
 }
 
-/**
- * Parse the BBAN structure used to configure each IBAN Specification and returns a matching regular expression.
- * A structure is composed of blocks of 3 characters (one letter and 2 digits). Each block represents
- * a logical group in the typical representation of the BBAN. For each group, the letter indicates which characters
- * are allowed in this group and the following 2-digits number tells the length of the group.
- */
+/// Parse the BBAN structure used to configure each IBAN Specification and returns a matching regular expression.
+/// A structure is composed of blocks of 3 characters (one letter and 2 digits). Each block represents
+/// a logical group in the typical representation of the BBAN. For each group, the letter indicates which characters
+/// are allowed in this group and the following 2-digits number tells the length of the group.
 // This is a dart version of parseStructure in
 // https://github.com/arhs/iban.js/blob/master/iban.js
 String _parseStructure(String countryCode, String structure) {

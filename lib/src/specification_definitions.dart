@@ -2,6 +2,7 @@
 
 part of iban;
 
+/// A list of all known IBAN specifications.
 const Map<String, Specification> specifications = const {
   'AD': const Specification('AD', 24, 'F04F04A12', 'AD1200012030200359100100', r'^AD[0-9]{2}([0-9]{04})([0-9]{04})([0-9A-Za-z]{12})$'),
   'AE': const Specification('AE', 23, 'F03F16', 'AE070331234567890123456', r'^AE[0-9]{2}([0-9]{03})([0-9]{16})$'),
