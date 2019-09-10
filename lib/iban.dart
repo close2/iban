@@ -23,7 +23,7 @@ String electronicFormat(String iban){
 /// Inserts a separator every 4 characters.
 String toPrintFormat(String iban,[String separator = ' ']){
   var every4Chars = new RegExp(r'(.{4})(?!$)');
-  return electronicFormat(iban).replaceAllMapped(every4Chars, (_) => '$_$separator');
+  return electronicFormat(iban).replaceAllMapped(every4Chars, (match) => '${match.group(0)}$separator');
 }
 
 /// Check if an IBAN is valid.

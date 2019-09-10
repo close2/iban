@@ -38,4 +38,7 @@ void main() {
       expect(isValid('__12345678'), isFalse);
     });
   });
+  test('Test spacing', () {
+    expect(toPrintFormat('NL93RABO4892894109'), equals('NL93 RABO 4892 8941 09'));
+  });
 }
