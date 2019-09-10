@@ -37,6 +37,9 @@ void main() {
     test('Test non existant country code', () {
       expect(isValid('__12345678'), isFalse);
     });
+    test('Test short IBAN', () {
+      expect(isValid('N'), isFalse);
+    });
   });
   test('Test spacing', () {
     expect(toPrintFormat('NL93RABO4892894109'), equals('NL93 RABO 4892 8941 09'));

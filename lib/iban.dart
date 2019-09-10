@@ -28,7 +28,7 @@ String toPrintFormat(String iban,[String separator = ' ']){
 
 /// Check if an IBAN is valid.
 bool isValid(String _iban) {
-  if (_iban.isEmpty) return false;
+  if (_iban.length < 2) return false;
   var iban = electronicFormat(_iban);
   var spec = specifications[iban.substring(0,2)];
   return spec != null && spec.isValid(iban);
