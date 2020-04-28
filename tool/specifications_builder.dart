@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'specifications.dart';
 
 String _template = '''
@@ -7,7 +8,7 @@ String _template = '''
 part of iban;
 
 /// A list of all known IBAN specifications.
-const Map<String, Specification> specifications = const {
+const Map<String, Specification> specifications = {
   INSERT_SPECS_HERE
 };
 ''';
@@ -17,7 +18,8 @@ int main(List<String> args) {
   if (args.isNotEmpty) {
     if (args[0] == '-h' || args[0] == '--help') {
       print('Generates iban specifications in $out.');
-      print('If an argument (other than -h or --help) is given, it is used as output-file.');
+      print(
+          'If an argument (other than -h or --help) is given, it is used as output-file.');
       return 0;
     }
     out = args[0];
@@ -30,9 +32,9 @@ int main(List<String> args) {
     final String example = spec.example;
     final String regExpString = _parseStructure(countryCode, structure);
 
-    return "'$countryCode': const Specification('$countryCode', $length, '$structure', '$example', r'$regExpString')";
+    return "'$countryCode': Specification('$countryCode', $length, '$structure', '$example', r'$regExpString')";
   }).join(',\n  ');
-  var outFile = new File(out);
+  var outFile = File(out);
   outFile.writeAsStringSync(_template.replaceFirst('INSERT_SPECS_HERE', specs));
 
   return 0;
@@ -46,7 +48,7 @@ int main(List<String> args) {
 // https://github.com/arhs/iban.js/blob/master/iban.js
 String _parseStructure(String countryCode, String structure) {
   // split in blocks of 3 chars
-  var regex = new RegExp(r'(.{3})').allMatches(structure).map((match) {
+  var regex = RegExp(r'(.{3})').allMatches(structure).map((match) {
     String block = match[1];
 
     // parse each structure block (1-char + 2-digits)
