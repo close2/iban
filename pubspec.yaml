@@ -1,5 +1,5 @@
 name: iban
-description: A validation library for ibans
+description: A validation library for IBANs included in the official registry. Also supports some unofficial ones.
 version: 0.1.1
 authors:
 - Christian Loitsch <christian@loitsch.com>
