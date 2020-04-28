@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Switch to `pedantic` linter rules
+- Fix analyzer issues
+
 ## 0.1.1
 
 Thanks to https://github.com/haarts
