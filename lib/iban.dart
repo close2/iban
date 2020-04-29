@@ -4,7 +4,7 @@ import 'package:mod97/mod97.dart';
 
 part 'src/helpers.dart';
 part 'src/specification.dart';
-part 'src/specification_definitions.dart';
+part 'src/specification_definitions.gen.dart';
 
 // Mostly copied from:
 // https://github.com/arhs/iban.js/blob/master/iban.js

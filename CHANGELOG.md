@@ -1,7 +1,12 @@
 # Changelog
 
+## 0.2.0
+- Sync specifications to iban.js specifications
+- restrict sdk to >=2
+
 ## 0.1.2
 
+Thanks to https://github.com/yapcwed
 - Switch to `pedantic` linter rules
 - Fix analyzer issues
 

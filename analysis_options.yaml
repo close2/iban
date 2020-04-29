@@ -2,4 +2,4 @@ include: package:pedantic/analysis_options.1.8.0.yaml
 
 analyzer:
   exclude:
-    - lib/src/specification_definitions.dart
+    - lib/src/specification_definitions.gen.dart

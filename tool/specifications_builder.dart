@@ -14,7 +14,7 @@ const Map<String, Specification> specifications = {
 ''';
 
 int main(List<String> args) {
-  String out = 'lib/src/specification_definitions.dart';
+  String out = 'lib/src/specification_definitions.gen.dart';
   if (args.isNotEmpty) {
     if (args[0] == '-h' || args[0] == '--help') {
       print('Generates iban specifications in $out.');

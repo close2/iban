@@ -13,8 +13,8 @@ class Specification {
   final String example;
 
   /// Constructor
-  const Specification(
-      this.countryCode, this.length, this.structure, this.example);
+  const Specification(this.countryCode, this.length, this.structure,
+      this.example);
 }
 
 /// A small wrapper function which builds a list of specifications.
@@ -45,6 +45,8 @@ Iterable<Specification> getAllSpecs() {
   addSpecification(Specification("BH", 22, "U04A14", "BH67BMAG00001299123456"));
   addSpecification(Specification(
       "BR", 29, "F08F05F10U01A01", "BR9700360305000010009795493P1"));
+  addSpecification(
+      Specification("BY", 28, "A04F04A16", "BY13NBRB3600900000002Z00AB00"));
   addSpecification(Specification("CH", 21, "F05A12", "CH9300762011623852957"));
   addSpecification(Specification("CR", 22, "F04F14", "CR72012300000171549015"));
   addSpecification(
@@ -57,6 +59,8 @@ Iterable<Specification> getAllSpecs() {
       Specification("DO", 28, "U04F20", "DO28BAGR00000001212453611324"));
   addSpecification(
       Specification("EE", 20, "F02F02F11F01", "EE382200221020145685"));
+  addSpecification(
+      Specification("EG", 29, "F04F04F17", "EG800002000156789012345180002"));
   addSpecification(
       Specification("ES", 24, "F04F04F01F01F10", "ES9121000418450200051332"));
   addSpecification(Specification("FI", 18, "F06F07F01", "FI2112345600000785"));
@@ -84,6 +88,10 @@ Iterable<Specification> getAllSpecs() {
       Specification("IS", 26, "F04F02F06F10", "IS140159260076545510730339"));
   addSpecification(
       Specification("IT", 27, "U01F05F05A12", "IT60X0542811101000000123456"));
+  addSpecification(
+      Specification("IQ", 23, "U04F03A12", "IQ98NBIQ850123456789012"));
+  addSpecification(
+      Specification("JO", 30, "A04F22", "JO15AAAA1234567890123456789012"));
   addSpecification(
       Specification("KW", 30, "U04A22", "KW81CBKU0000000000001234560101"));
   addSpecification(Specification("KZ", 20, "F03A13", "KZ86125KZT5004100100"));
@@ -119,11 +127,15 @@ Iterable<Specification> getAllSpecs() {
   addSpecification(
       Specification("PT", 25, "F04F04F11F02", "PT50000201231234567890154"));
   addSpecification(
+      Specification("QA", 29, "U04A21", "QA30AAAA123456789012345678901"));
+  addSpecification(
       Specification("RO", 24, "U04A16", "RO49AAAA1B31007593840000"));
   addSpecification(
       Specification("RS", 22, "F03F13F02", "RS35260005601001611379"));
   addSpecification(
       Specification("SA", 24, "F02A18", "SA0380000000608010167519"));
+  addSpecification(Specification(
+      "SC", 31, "U04F04F16U03", "SC18SSCB11010000000000001497USD"));
   addSpecification(
       Specification("SE", 24, "F03F16F01", "SE4550000000058398257466"));
   addSpecification(Specification("SI", 19, "F05F08F02", "SI56263300012039086"));
@@ -134,15 +146,23 @@ Iterable<Specification> getAllSpecs() {
   addSpecification(
       Specification("ST", 25, "F08F11F02", "ST68000100010051845310112"));
   addSpecification(
+      Specification("SV", 28, "U04F20", "SV62CENR00000000000000700025"));
+  addSpecification(
       Specification("TL", 23, "F03F14F02", "TL380080012345678910157"));
   addSpecification(
       Specification("TN", 24, "F02F03F13F02", "TN5910006035183598478831"));
   addSpecification(
       Specification("TR", 26, "F05F01A16", "TR330006100519786457841326"));
   addSpecification(
+      Specification("UA", 29, "F25", "UA511234567890123456789012345"));
+  addSpecification(Specification("VA", 22, "F18", "VA59001123000012345678"));
+  addSpecification(
       Specification("VG", 24, "U04F16", "VG96VPVG0000012345678901"));
   addSpecification(
       Specification("XK", 20, "F04F10F02", "XK051212012345678906"));
+
+
+  // The following countries are not included in the official IBAN registry but use the IBAN specification
 
   // Angola
   addSpecification(Specification("AO", 25, "F21", "AO69123456789012345678901"));
@@ -156,7 +176,7 @@ Iterable<Specification> getAllSpecs() {
       Specification("BJ", 28, "F24", "BJ39123456789012345678901234"));
   // Ivory
   addSpecification(
-      Specification("CI", 28, "U01F23", "CI17A12345678901234567890123"));
+      Specification("CI", 28, "U02F22", "CI70CI1234567890123456789012"));
   // Cameron
   addSpecification(
       Specification("CM", 27, "F23", "CM9012345678901234567890123"));
@@ -167,9 +187,6 @@ Iterable<Specification> getAllSpecs() {
   // Iran
   addSpecification(
       Specification("IR", 26, "F22", "IR861234568790123456789012"));
-  // Jordan
-  addSpecification(
-      Specification("JO", 30, "A04F22", "JO15AAAA1234567890123456789012"));
   // Madagascar
   addSpecification(
       Specification("MG", 27, "F23", "MG1812345678901234567890123"));
@@ -178,15 +195,36 @@ Iterable<Specification> getAllSpecs() {
       Specification("ML", 28, "U01F23", "ML15A12345678901234567890123"));
   // Mozambique
   addSpecification(Specification("MZ", 25, "F21", "MZ25123456789012345678901"));
-  // Quatar
-  addSpecification(
-      Specification("QA", 29, "U04A21", "QA30AAAA123456789012345678901"));
   // Senegal
   addSpecification(
       Specification("SN", 28, "U01F23", "SN52A12345678901234567890123"));
-  // Ukraine
+
+  // The following are regional and administrative French Republic subdivision IBAN specification (same structure as FR, only country code vary)
   addSpecification(
-      Specification("UA", 29, "F25", "UA511234567890123456789012345"));
+      Specification("GF", 27, "F05F05A11F02", "GF121234512345123456789AB13"));
+  addSpecification(
+      Specification("GP", 27, "F05F05A11F02", "GP791234512345123456789AB13"));
+  addSpecification(
+      Specification("MQ", 27, "F05F05A11F02", "MQ221234512345123456789AB13"));
+  addSpecification(
+      Specification("RE", 27, "F05F05A11F02", "RE131234512345123456789AB13"));
+  addSpecification(
+      Specification("PF", 27, "F05F05A11F02", "PF281234512345123456789AB13"));
+  addSpecification(
+      Specification("TF", 27, "F05F05A11F02", "TF891234512345123456789AB13"));
+  addSpecification(
+      Specification("YT", 27, "F05F05A11F02", "YT021234512345123456789AB13"));
+  addSpecification(
+      Specification("NC", 27, "F05F05A11F02", "NC551234512345123456789AB13"));
+  addSpecification(
+      Specification("BL", 27, "F05F05A11F02", "BL391234512345123456789AB13"));
+  addSpecification(
+      Specification("MF", 27, "F05F05A11F02", "MF551234512345123456789AB13"));
+  addSpecification(
+      Specification("PM", 27, "F05F05A11F02", "PM071234512345123456789AB13"));
+  addSpecification(
+      Specification("WF", 27, "F05F05A11F02", "WF621234512345123456789AB13"));
+
 
   return jsSpecs;
 }
