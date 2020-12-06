@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+- Fix special character bug.  
+  We need to first remove special characters and only then verify the min length.
+
 ## 0.2.0
 - Sync specifications to iban.js specifications
 - restrict sdk to >=2
