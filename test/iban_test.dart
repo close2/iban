@@ -40,6 +40,9 @@ void main() {
     test('Test short IBAN', () {
       expect(isValid('N'), isFalse);
     });
+    test('Test short invalid character at string start', () {
+      expect(isValid('_a'), isFalse);
+    });
   });
   test('Test spacing', () {
     expect(toPrintFormat('NL93RABO4892894109'), equals('NL93 RABO 4892 8941 09'));
