@@ -2,6 +2,7 @@
 
 ## 1.0.0
 - null safety version
+  Thanks: https://github.com/alex0711
 
 ## 0.2.1
 - Fix special character bug.  

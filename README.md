@@ -1,14 +1,3 @@
-# null safety version
-
-I've already started a null safety version in branch: null-safety.
-
-As I haven't yet read the migration guide it isn't merged.
-
-## Help wanted!
-
-If you know have read the migration guide please take a look
-and open an issue.  (A simple Looks-good-to-me would also be appreciated).
-
 # iban
 
 Validate IBANs
