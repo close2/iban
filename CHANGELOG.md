@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.0
+- null safety version
+
 ## 0.2.1
 - Fix special character bug.  
   We need to first remove special characters and only then verify the min length.

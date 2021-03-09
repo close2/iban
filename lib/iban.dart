@@ -39,6 +39,6 @@ List<String> getCountries() {
 }
 
 /// Return an example iban for country.
-String getExample(String country) {
-  return specifications[country].example;
+String? getExample(String country) {
+  return specifications[country]?.example;
 }

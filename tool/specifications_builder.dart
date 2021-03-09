@@ -49,7 +49,7 @@ int main(List<String> args) {
 String _parseStructure(String countryCode, String structure) {
   // split in blocks of 3 chars
   var regex = RegExp(r'(.{3})').allMatches(structure).map((match) {
-    String block = match[1];
+    String block = match[1]!;
 
     // parse each structure block (1-char + 2-digits)
     var format;

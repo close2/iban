@@ -28,9 +28,6 @@ void main() {
     });
   });
   group('Test unusual inputs', () {
-    test('Test null input', () {
-      expect(() => isValid(null), throwsNoSuchMethodError);
-    });
     test('Test empty string', () {
       expect(isValid(''), isFalse);
     });
