@@ -25,9 +25,14 @@ String toPrintFormat(String iban, [String separator = ' ']) {
       .replaceAllMapped(every4Chars, (match) => '${match.group(0)}$separator');
 }
 
+String _stripSpaces(_iban) {
+  return _iban.replaceAll(' ', '').toUpperCase();
+}
+
 /// Check if an IBAN is valid.
-bool isValid(String _iban) {
-  var iban = electronicFormat(_iban);
+bool isValid(String _iban, {bool sanitize = true}) {
+  var iban = sanitize ? _stripSpaces(_iban) : _iban;
+
   if (iban.length < 2) return false;
   var spec = specifications[iban.substring(0, 2)];
   return spec != null && spec.isValid(iban);

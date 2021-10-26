@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.1
+- only strip spaces when validating
+
 ## 1.0.0
 - null safety version
   Thanks: https://github.com/alex0711

@@ -31,7 +31,7 @@ void main() {
     test('Test empty string', () {
       expect(isValid(''), isFalse);
     });
-    test('Test non existant country code', () {
+    test('Test non existent country code', () {
       expect(isValid('__12345678'), isFalse);
     });
     test('Test short IBAN', () {
@@ -43,5 +43,11 @@ void main() {
   });
   test('Test spacing', () {
     expect(toPrintFormat('NL93RABO4892894109'), equals('NL93 RABO 4892 8941 09'));
+  });
+  test('Iban with spaces and lowercase is valid', () {
+    expect(isValid('at61 1904 3002 3457 3201'), isTrue);
+  });
+  test('Iban with spaces and lowercase is not valid with sanitize == false', () {
+    expect(isValid('at61 1904 3002 3457 3201', sanitize: false), isFalse);
   });
 }
