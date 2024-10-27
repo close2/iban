@@ -32,7 +32,7 @@ void main() {
 
 ## Iban specifications
 
-The iban specifications are copied from [iban.js](https://github.com/arhs/iban.js/blob/master/iban.js)
+The iban specifications are copied from [iban.js](https://github.com/arhs/iban.js/blob/master/iban.js), which is unfortunately no longer maintained.
 
 See [specifications.dart](tool/specifications.dart) for all available countries.
 
@@ -41,7 +41,7 @@ Contrary to `iban.js`, which parses the specifications at runtime, all regular e
 strings are parsed using [specifications_builder.dart](tool/specifications_builder.dart).
 
 
-Please open an issue if you notice that my specifications are out of sync with `iban.js` or
-if you know how to build the iban for another country.
+Please open an issue if you know how to build the iban for another country.
+
 
 
