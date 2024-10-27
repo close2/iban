@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+- add LY (Libya IBAN)
+
 ## 1.0.1
 - only strip spaces when validating
 
