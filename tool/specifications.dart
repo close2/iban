@@ -198,6 +198,9 @@ Iterable<Specification> getAllSpecs() {
   // Senegal
   addSpecification(
       Specification("SN", 28, "U01F23", "SN52A12345678901234567890123"));
+  // Libya
+  addSpecification(
+      Specification("LY", 25, "F03F03F15", "LY83002048000020100120361"));
 
   // The following are regional and administrative French Republic subdivision IBAN specification (same structure as FR, only country code vary)
   addSpecification(
@@ -224,7 +227,6 @@ Iterable<Specification> getAllSpecs() {
       Specification("PM", 27, "F05F05A11F02", "PM071234512345123456789AB13"));
   addSpecification(
       Specification("WF", 27, "F05F05A11F02", "WF621234512345123456789AB13"));
-
 
   return jsSpecs;
 }
