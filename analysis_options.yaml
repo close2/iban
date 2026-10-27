@@ -1,5 +1,7 @@
-include: package:pedantic/analysis_options.1.8.0.yaml
+include: package:lints/recommended.yaml
 
 analyzer:
-  exclude:
-    - lib/src/specification_definitions.gen.dart
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
