@@ -2,7 +2,7 @@
 
 ## 1.2.0
 - Add MA (Morocco) IBAN and sync specifications with `ibankit-js` (`FK`, `MN`, `NI`, `OM`, `RU`, `SD`, `SO`, `CF`, `CG`, `DJ`, `GA`, `GQ`, `HN`, `KM`, `NE`, `TD`, `TG`)
-- Require Dart `^3.0.0` and migrate linter rules from `pedantic` to `lints`
+- Require Dart `^3.0.0`, migrate linter rules from `pedantic` to `lints`, and cache compiled `RegExp`s lazily without a manual build step
 
 ## 1.1.0
 - add LY (Libya IBAN)

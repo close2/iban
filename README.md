@@ -34,12 +34,7 @@ void main() {
 
 The iban specifications were originally copied from [iban.js](https://github.com/arhs/iban.js/blob/master/iban.js) (no longer maintained) and are now synced with [ibankit-js](https://github.com/koblas/ibankit-js).
 
-See [specifications.dart](tool/specifications.dart) for all available countries.
-
-
-Contrary to `iban.js`, which parses the specifications at runtime, all regular expression
-strings are parsed using [specifications_builder.dart](tool/specifications_builder.dart).
-
+See [specifications.dart](lib/src/specifications.dart) for all available countries.
 
 Please open an issue if you know how to build the iban for another country.
 
