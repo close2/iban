@@ -1,4 +1,4 @@
-part of iban;
+part of '../iban.dart';
 
 /// Create a new Specification for a valid IBAN number.
 class Specification {
@@ -24,7 +24,7 @@ class Specification {
 
   /// Check if the passed iban is valid according to this specification.
   bool isValid(String iban) {
-    var regex = RegExp(regexDef);
+    final regex = RegExp(regexDef);
     return length == iban.length &&
         countryCode == iban.substring(0, 2) &&
         regex.hasMatch(iban) &&

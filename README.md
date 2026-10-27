@@ -2,7 +2,7 @@
 
 Validate IBANs
 
-![Build Status](https://travis-ci.org/close2/iban.svg?branch=master)
+![Build Status](https://github.com/close2/iban/actions/workflows/dart.yml/badge.svg)
 ## Usage
 
 A simple usage example:
@@ -32,7 +32,7 @@ void main() {
 
 ## Iban specifications
 
-The iban specifications are copied from [iban.js](https://github.com/arhs/iban.js/blob/master/iban.js), which is unfortunately no longer maintained.
+The iban specifications were originally copied from [iban.js](https://github.com/arhs/iban.js/blob/master/iban.js) (no longer maintained) and are now synced with [ibankit-js](https://github.com/koblas/ibankit-js).
 
 See [specifications.dart](tool/specifications.dart) for all available countries.
 

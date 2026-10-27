@@ -1,14 +1,20 @@
 name: iban
 description: A validation library for IBANs included in the official registry. Also supports some unofficial ones.
-version: 1.1.0
+version: 1.2.0
 homepage: https://github.com/close2/iban
+repository: https://github.com/close2/iban
+issue_tracker: https://github.com/close2/iban/issues
+topics:
+  - iban
+  - banking
+  - validation
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
+  sdk: '^3.0.0'
 
 dependencies:
   mod97: '^1.0.0'
 
 dev_dependencies:
+  lints: ^5.0.0
   test: '^1.16.0'
-  pedantic: ^1.8.0
